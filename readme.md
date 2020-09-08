@@ -2,11 +2,11 @@
 This is a login page made with basic HTML,CSS & javascript
 
 TODO   
-[*]  Input For Username 🏠  
-[*]  Input for Password 🔒  
-[*]  Submit Button 🔘  
-[*]  UserName and Password Validation using if 🐶  
-[*]  Page Redirection  
+[ * ]  Input For Username 🏠  
+[ * ]  Input for Password 🔒  
+[ * ]  Submit Button 🔘  
+[ * ]  UserName and Password Validation using if 🐶  
+[ * ]  Page Redirection  
 
 [ ] Create an html file named signup.html 
     -It must contain text inputs for "Name","Email" and "Password"
