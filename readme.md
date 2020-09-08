@@ -8,15 +8,15 @@ TODO
 - [x] UserName and Password Validation using if 🐶  
 - [x] Page Redirection  
 
-- [ ] Create an html file named signup.html 
+- [ ] Create an html file named signup.html  
     -It must contain text inputs for "Name","Email" and "Password"
-    -A signup button
-    📓 Just simple outline is enough
+    -A signup button 
+    📓 Just simple outline is enough 
 
-- [ ]Add a file named index.html 
-    -Index file need links called "Login" and "SignUp"
-    -One user clicks login he must be redirected to login.html
-    -If user clicks signup he must be redirected to signup.html
+- [ ] Add a file named index.html  
+    -Index file need links called "Login" and "SignUp" 
+    -One user clicks login he must be redirected to login.html 
+    -If user clicks signup he must be redirected to signup.html 
 
 **This can be done later
 - [ ] Then You should start working in Signup process
