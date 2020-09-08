@@ -1,0 +1,43 @@
+<html>
+ <head><title>test</title>
+   </head>
+  <body>
+    <h1><strong>APPLICATION</strong></h1>
+    <p><strong>Username   </strong><input type="text" placeholder="Enter Username" id="userName"><br></p>
+    <p><strong>Password   </strong><input type="text" placeholder="Enter Password" id="passWord"> <br></p>
+    
+    <input type="button" onclick="check()" value="Login">
+    
+    </body>
+ <script type="text/javascript">
+   function check()
+   {
+    
+     var user=document.getElementById("userName").value;
+     console.log(user);
+     
+     var password=document.getElementById("passWord").value;
+     console.log(password);
+     
+     var defaultUsername="root"; //Renamed it to avoid confusiong
+     var defaultPassword="toor"; 
+     
+     if(defaultUsername==user && defaultPassword==password)
+       
+    {
+        location.replace('dashboard.html');
+        console.log("Correct password");
+       
+     } 
+     else
+     {
+        location.reload('my work.html');
+        alert("Enter A Valid Username And Password");
+     	console.log("Incorrect Password");
+     
+     }
+   }
+ 
+ </script>  
+   
+  </html>  
