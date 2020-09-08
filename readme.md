@@ -14,12 +14,12 @@ TODO
     📓 Just simple outline is enough 
 
 - [ ] Add a file named index.html  
-    -Index file need links called "Login" and "SignUp" 
-    -One user clicks login he must be redirected to login.html 
-    -If user clicks signup he must be redirected to signup.html 
+    -Index file need links called "Login" and "SignUp"     
+    -One user clicks login he must be redirected to login.html     
+    -If user clicks signup he must be redirected to signup.html      
 
-**This can be done later
-- [ ] Then You should start working in Signup process
+**This can be done later     
+- [ ] Then You should start working in Signup process    
 
 
 
