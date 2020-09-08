@@ -9,8 +9,8 @@ TODO
 - [x] Page Redirection  
 
 - [ ] Create an html file named signup.html  
-    -It must contain text inputs for "Name","Email" and "Password"
-    -A signup button 
+    -It must contain text inputs for "Name","Email" and "Password" 
+    -A signup button   
     📓 Just simple outline is enough 
 
 - [ ] Add a file named index.html  
