@@ -8,7 +8,7 @@ TODO
 - [x] UserName and Password Validation using if 🐶  
 - [x] Page Redirection  
 
-- [ ] Create an html file named signup.html  
+- [x] Create an html file named signup.html  
     -It must contain text inputs for "Name","Email" and "Password"    
     -A signup button   
     📓 Just simple outline is enough 
