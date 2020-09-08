@@ -9,7 +9,7 @@ TODO
 - [x] Page Redirection  
 
 - [ ] Create an html file named signup.html  
-    -It must contain text inputs for "Name","Email" and "Password" 
+    -It must contain text inputs for "Name","Email" and "Password"    
     -A signup button   
     📓 Just simple outline is enough 
 
