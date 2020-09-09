@@ -13,7 +13,7 @@ TODO
     -A signup button   
     📓 Just simple outline is enough 
 
-- [ ] Add a file named index.html  
+- [x] Add a file named index.html  
     -Index file need links called "Login" and "SignUp"     
     -One user clicks login he must be redirected to login.html     
     -If user clicks signup he must be redirected to signup.html      

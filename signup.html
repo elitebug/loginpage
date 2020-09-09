@@ -20,10 +20,55 @@
 
 <p><strong> Password</strong>&nbsp;&nbsp;<input type="password" placeholder="Enter a Password" id="password"></p>
  
-<input type="button" id="save" value="Submit">
+<input type="button" onclick="redirect()" id="save" value="Submit">
+
 
 
 </body>
+
+<script type="text/javascript">
+
+function redirect()
+{
+    var myObj, myJSON, text, obj, check, json, username, email, password; 
+
+    username=document.getElementById("username").value;
+
+    email=document.getElementById("email").value;
+
+    password=document.getElementById("password").value; 
+
+
+
+
+    
+myObj = { data:[{ name: username, email: email, password: password }]};
+
+console.log(myObj);
+
+
+obj = JSON.parse(JSON.stringify(myObj));
+
+console.log(obj);
+
+obj["data"].push({ name: username, email: email, password: password });
+
+myJSON = JSON.stringify(obj);
+
+localStorage.setItem("testJSON", myJSON);
+
+text = localStorage.getItem("testJSON");
+
+check = JSON.parse(text);
+
+console.log(check);
+
+
+
+
+}
+
+</script>
 
 
 </html>
