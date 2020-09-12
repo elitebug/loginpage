@@ -27,6 +27,8 @@
 </body>
 
 <script type="text/javascript">
+var flag = 0;
+
 
 var text1 = localStorage.getItem("testJSON");
 
@@ -54,7 +56,29 @@ function redirect()
 
     password=document.getElementById("password").value; 
 
-    if(username != "" && email != "" && password != "")
+   
+    for(var i = 0; i < obj['data'].length; i++) 
+     {
+
+      var check = obj['data'][i].email;
+
+      if(check == email)
+      {
+        flag = 1;
+        
+      }
+     }
+
+     if(flag == 1)
+     {
+        alert("Entered email aleready exist");
+       
+       location.href ='signup.html';
+
+     }
+
+
+    else if(username != "" && email != "" && password != "" && flag == 0)
     {
 
     obj["data"].push({ name: username, email: email, password: password });
@@ -69,16 +93,16 @@ function redirect()
     check = JSON.parse(text);
 
     console.log(check['data']); 
-    /*
-    //location.href = "index.html";
-    */
+    location.href = "index.html";
+    
     
     }
-        else
-        {
+    else
+    {
 
-         alert("Enter fill all the required box");
-        }
+        alert("Enter fill all the required box");
+
+    }
     
 }
 

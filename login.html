@@ -10,6 +10,7 @@
     
     </body>
  <script type="text/javascript">
+ var flag = 0;
    function check()
    {
     var text = localStorage.getItem("testJSON");
@@ -26,24 +27,24 @@
 
      for(var i = 0; i < check['data'].length; i++) 
      {
-      var obj = check['data'[i].name];
-      var obj2 =check['data'[i].password]
-      var string = JSON.stringify(obj);
-      var string2 =JSON.stringify(obj2);
-      console.log(string);
-      console.log(string2);
+      var obj = check['data'][i].name;
+      var obj2 = check['data'][i].password;
+      /*var string = JSON.stringify(obj);
+      var string2 =JSON.stringify(obj2); */
+      console.log(obj);
+      console.log(obj2);
 
-      if(string == user && string2 == password)  
+     // if(string == user && string2 == password)  
+      if(obj == user && obj2 == password)  
       {
-        alert("Login successfull");
-        location.href = "dashboard.html";
-       //var flag = 1;
+        
+       flag = 1;
 
       }
       
        }
 
-     /*
+     
      
      if(flag == 1)
      {
@@ -56,7 +57,7 @@
       location.href ="login.html";
 
      }
-    */
+    
   
    }
  
