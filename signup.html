@@ -16,11 +16,11 @@
 
 <p><strong> Username</strong>&nbsp;&nbsp;<input type="text" placeholder="Enter your Name" id="username" required></p>
 
-<p><strong> Email</strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" placeholder="Enter your Email" id="email" required></p>
+<p><strong> Email</strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" placeholder="Enter your Email" id="email" required></p>&nbsp;&nbsp;&nbsp;&nbsp;<strong id = "1"></strong>
 
 <p><strong> Password</strong>&nbsp;&nbsp;<input type="password" placeholder="Enter a Password" id="password" required></p>
  
-<input type="button" onclick="redirect()" id="save" value="Submit">
+<input type="button" onclick="redirect()" id="save" value="Submit">&nbsp;&nbsp;&nbsp;&nbsp;<strong id = "2"></strong>
 
 
 
@@ -71,9 +71,8 @@ function redirect()
 
      if(flag == 1)
      {
-        alert("Entered email aleready exist");
+        document.getElementById("1").innerHTML = "Email Already Exist";
        
-       location.href ='signup.html';
 
      }
 
@@ -93,6 +92,7 @@ function redirect()
     check = JSON.parse(text);
 
     console.log(check['data']); 
+    
     location.href = "index.html";
     
     
@@ -100,8 +100,7 @@ function redirect()
     else
     {
 
-        alert("Enter fill all the required box");
-
+        document.getElementById("2").innerHTML = "Please Fill The Empty Field";
     }
     
 }

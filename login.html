@@ -3,10 +3,10 @@
    </head>
   <body>
     <h1><strong>APPLICATION</strong></h1>
-    <p><strong>Username   </strong><input type="text" placeholder="Enter Username" id="userName"><br></p>
+    <p><strong>Username   </strong><input type="text" placeholder="Enter Username" id="userName"><br></p> 
     <p><strong>Password   </strong><input type="text" placeholder="Enter Password" id="passWord"> <br></p>
     
-    <input type="button" onclick="check()" value="Login">
+    <input type="button" onclick="check()" value="Login"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong id="1"></strong>
     
     </body>
  <script type="text/javascript">
@@ -29,12 +29,11 @@
      {
       var obj = check['data'][i].name;
       var obj2 = check['data'][i].password;
-      /*var string = JSON.stringify(obj);
-      var string2 =JSON.stringify(obj2); */
+      
       console.log(obj);
       console.log(obj2);
 
-     // if(string == user && string2 == password)  
+     
       if(obj == user && obj2 == password)  
       {
         
@@ -48,13 +47,13 @@
      
      if(flag == 1)
      {
-      alert("Login successfull");
+      
       location.href = "dashboard.html";
      }
      else
      {
-      alert("Oops something went wrong");
-      location.href ="login.html";
+
+      document.getElementById("1").innerHTML = "Oops Something Went Wrong Try Again";
 
      }
     
