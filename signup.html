@@ -14,11 +14,11 @@
 <body>
     <h1>SIGN UP</h1>
 
-<p><strong> Username</strong>&nbsp;&nbsp;<input type="text" placeholder="Enter your Name" id="username"></p>
+<p><strong> Username</strong>&nbsp;&nbsp;<input type="text" placeholder="Enter your Name" id="username" required></p>
 
-<p><strong> Email</strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" placeholder="Enter your Email" id="email"></p>
+<p><strong> Email</strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" placeholder="Enter your Email" id="email" required></p>
 
-<p><strong> Password</strong>&nbsp;&nbsp;<input type="password" placeholder="Enter a Password" id="password"></p>
+<p><strong> Password</strong>&nbsp;&nbsp;<input type="password" placeholder="Enter a Password" id="password" required></p>
  
 <input type="button" onclick="redirect()" id="save" value="Submit">
 
@@ -28,9 +28,25 @@
 
 <script type="text/javascript">
 
+var text1 = localStorage.getItem("testJSON");
+
+    if(text1 == null)
+    {
+        var myObj = { data:[{ name: 'admin', email: "admin", password: "admin" }]};
+
+        var obj = JSON.parse(JSON.stringify(myObj));
+
+    }
+    
+    else
+    {
+        var obj = JSON.parse(text1); 
+
+    }
+
 function redirect()
 {
-    var myObj, myJSON, text, obj, check, json, username, email, password; 
+    var myJSON, text, check, json, username, email, password; 
 
     username=document.getElementById("username").value;
 
@@ -38,34 +54,32 @@ function redirect()
 
     password=document.getElementById("password").value; 
 
+    if(username != "" && email != "" && password != "")
+    {
 
+    obj["data"].push({ name: username, email: email, password: password });
+    console.log(obj);
 
+    myJSON = JSON.stringify(obj);
 
+    localStorage.setItem("testJSON", myJSON);
+
+    text = localStorage.getItem("testJSON");
+
+    check = JSON.parse(text);
+
+    console.log(check['data']); 
+    /*
+    //location.href = "index.html";
+    */
     
-myObj = { data:[{ name: username, email: email, password: password }]};
+    }
+        else
+        {
 
-console.log(myObj);
-
-
-obj = JSON.parse(JSON.stringify(myObj));
-
-console.log(obj);
-
-obj["data"].push({ name: username, email: email, password: password });
-
-myJSON = JSON.stringify(obj);
-
-localStorage.setItem("testJSON", myJSON);
-
-text = localStorage.getItem("testJSON");
-
-check = JSON.parse(text);
-
-console.log(check);
-
-
-
-
+         alert("Enter fill all the required box");
+        }
+    
 }
 
 </script>

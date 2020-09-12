@@ -12,30 +12,52 @@
  <script type="text/javascript">
    function check()
    {
-    
-     var user=document.getElementById("userName").value;
-     console.log(user);
+    var text = localStorage.getItem("testJSON");
+
+    var check = JSON.parse(text);
+
+    console.log(check['data']);
+
+    var user=document.getElementById("userName").value;
+
      
      var password=document.getElementById("passWord").value;
-     console.log(password);
      
-     var defaultUsername="root"; //Renamed it to avoid confusiong
-     var defaultPassword="toor"; 
+
+     for(var i = 0; i < check['data'].length; i++) 
+     {
+      var obj = check['data'[i].name];
+      var obj2 =check['data'[i].password]
+      var string = JSON.stringify(obj);
+      var string2 =JSON.stringify(obj2);
+      console.log(string);
+      console.log(string2);
+
+      if(string == user && string2 == password)  
+      {
+        alert("Login successfull");
+        location.href = "dashboard.html";
+       //var flag = 1;
+
+      }
+      
+       }
+
+     /*
      
-     if(defaultUsername==user && defaultPassword==password)
-       
-    {
-        location.replace('dashboard.html');
-        console.log("Correct password");
-       
-     } 
+     if(flag == 1)
+     {
+      alert("Login successfull");
+      location.href = "dashboard.html";
+     }
      else
      {
-        location.reload('my work.html');
-        alert("Enter A Valid Username And Password");
-     	console.log("Incorrect Password");
-     
+      alert("Oops something went wrong");
+      location.href ="login.html";
+
      }
+    */
+  
    }
  
  </script>  
